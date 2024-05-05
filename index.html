@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website with Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3f4f6;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-group button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Website</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+      color: #333;
+    }
+    nav a:hover {
+      background-color: #ddd;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1, h2, p {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Login</button>
-            </div>
-        </form>
-    </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Our Modern Website</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" id="homeBtn">Home</a>
+    <a href="#" id="aboutBtn">About Us</a>
+    <a href="#" id="contactBtn">Contact Us</a>
+  </nav>
+
+  <!-- Content -->
+  <div class="container" id="content">
+    <h2>Home Page</h2>
+    <p>This is the homepage of our modern website.</p>
+  </div>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // JavaScript for interactivity
+    const homeBtn = document.getElementById('homeBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const contactBtn = document.getElementById('contactBtn');
+    const content = document.getElementById('content');
+
+    // Event listeners for buttons
+    homeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      content.innerHTML = `
+        <h2>Home Page</h2>
+        <p>This is the homepage of our modern website.</p>
+      `;
+    });
+
+    aboutBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      content.innerHTML = `
+        <h2>About Us</h2>
+        <p>This is the about us page.</p>
+      `;
+    });
+
+    contactBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      content.innerHTML = `
+        <h2>Contact Us</h2>
+        <p>You can contact us via email: contact@example.com</p>
+      `;
+    });
+  </script>
 </body>
 </html>
